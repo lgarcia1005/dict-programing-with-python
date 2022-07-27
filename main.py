@@ -3,6 +3,13 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+import os
+from os import path
+import module as m1
+from module import diff
+from random import randint
+import datetime
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -133,7 +140,7 @@ if __name__ == '__main__':
 #
 #
 # u1 = User("kipay", "kipay123")
-# a1 = Admin("zep", "bilat123", "code 86")
+# a1 = Admin("zep", "test123", "code 86")
 #
 # u1.display()
 # a1.display69()
@@ -199,11 +206,11 @@ if __name__ == '__main__':
 #
 # print(basketball_teams)
 #
-# basketball_teams.update({"Team Bilat": ["zep 1", "zep 2", "zep 3", "zep 4", "zep 5"]})
+# basketball_teams.update({"Team test": ["zep 1", "zep 2", "zep 3", "zep 4", "zep 5"]})
 #
 # print(basketball_teams)
 #
-# print(basketball_teams['Team Bilat'])
+# print(basketball_teams['Team test'])
 #
 # zep = zip(shopping_list, basketball_teams)
 #
@@ -219,35 +226,129 @@ if __name__ == '__main__':
 # print(basketball_teams.items())
 
 
-employee_1 = {
-    "Name": "Frank",
-    "Position": "Sales Rep",
-    "Email": "frank@companay.com"
-}
+# employee_1 = {
+#     "Name": "Frank",
+#     "Position": "Sales Rep",
+#     "Email": "frank@companay.com"
+# }
+#
+# for key, value in employee_1.items():
+#     print(key, value)
+#
+# for name in employee_1.keys():
+#     print(name)
+#
+# foods = {
+#     "Mcdo": ["chicken", "sundae"],
+#     "Jolibee": ["chicken", "spagetti"],
+#     "KFC": ["gravy", "mashed potato"],
+#     "PizzaHut": ["pizza", "pasta"]
+# }
+#
+# for item in foods.values():
+#     print(item)
+#     print(item[0])
 
-for key, value in employee_1.items():
-    print(key, value)
+# cat = {
+#     1: {"name": "Mengmeng", "Age": 5, "color": "white"},
+#     2: {"name": "Posasa", "Age": 99, "color": "black"},
+# }
+#
+# for i in cat.items():
+#     print(i)
+#
+# for i in cat.values():
+#     print(i)
+#
+# for i in cat.keys():
+#     print(i)
 
-for name in employee_1.keys():
-    print(name)
+# Files and Exceptions
+# f = open("test.txt", 'w')
+# f.write("kipay")
+#
+# f = open("test.txt", "a")
+# f.write("\n test test")
+#
+# f = open("test.txt", "r")
+# print(f.read())
 
-foods = {
-    "Mcdo": ["chicken", "sundae"],
-    "Jolibee": ["chicken", "spagetti"],
-    "KFC": ["gravy", "mashed potato"],
-    "PizzaHut": ["pizza", "pasta"]
-}
+# b = open("kipay.txt", "w")
+# b.write("anemal")
 
-for item in foods.values():
-    print(item)
-    print(item[0])
+# f = open("kipay.txt", "r")
+# print(f.readline())
+# print(f.readline())
+# f.close()
+#
+# if os.path.exists("test.txt"):
+#     os.remove('test.txt')
+# else:
+#     print("no kipay found!")
 
-cat = {
-    1: {"name": "Mengmeng", "Age": 5, "color": "white"},
-    2: {"name": "Posasa", "Age": 99, "color": "black"},
-}
+# n = -5
+# if n < 0:
+#     raise Exception("No negative numbers allowed!")
 
-print(cat.items())
+# test = "test"
+# if test == "test":
+#     print(test)
+#
+# is_this_round = "ball"
+#
+# assert is_this_round == "ball"
+# # assert is_this_round == "balls"
+#
+# try:
+#     print(value)
+# except Exception:
+#     Exception("Exceptions Found!")
+# finally:
+#     value = "test"
+#     print(value)
 
-for i in cat:
-    print(cat[i])
+# x = 500
+# if x > 100:
+#     raise Exception("x should not be bigger than 100")
+
+# try:
+#     print(variable_1)
+# except:
+#     print("No Varialbe")
+
+# try:
+#     for i in range(6):
+#         print("Happe")
+# except SyntaxError:
+#     print("error")
+
+# try:
+#     print(12 * 6)
+# except:
+#     print("no")
+# else:
+#     print("yes")
+
+# print(123 + "Test")
+
+# Modules
+
+# f = open("module.py","x")
+
+# m1.greeting("Meng")
+#
+# sasa = m1.User("Sasa", 69, "London")
+# sasa.hello()
+# print(sasa.sum(1, 2))
+#
+# print(diff(1, 3))
+
+# print(randint(1, 100))
+# print(type(randint(1, 100)))
+#
+# t = datetime.datetime.now()
+# print(t)
+# print(type(t))
+#
+# t = datetime.datetime(2022, 7, 27)
+# print(t.strftime("%B"))
